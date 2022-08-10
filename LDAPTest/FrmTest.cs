@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace LDAPTest
 {
-    public partial class Form1 : Form
+    public partial class FrmTest : Form
     {
         private Action<string> _atualizarTela;
         private Action _trabalhoAtual;
 
-        public Form1()
+        public FrmTest()
         {
             InitializeComponent();
             this._atualizarTela = AtualizarTela;
@@ -93,7 +93,7 @@ namespace LDAPTest
             catch (Exception ex)
             {
                 txtInfo.ForeColor = System.Drawing.Color.Red;
-                _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em VerificarUsuarioNoGrupos {ex.ToString()}", null, null);
+                _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em VerificarUsuarioNoGrupos {ex.Message}", null, null);
                 LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.Message}");
                 LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.StackTrace}");
 
@@ -143,7 +143,7 @@ namespace LDAPTest
             catch (Exception ex)
             {
                 txtInfo.ForeColor = System.Drawing.Color.Red;
-                _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em VerificarUsuarioNoGruposV2 {ex.ToString()}", null, null);
+                _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em VerificarUsuarioNoGruposV2 {ex.Message}", null, null);
                 LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.Message}");
                 LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.StackTrace}");
 
@@ -173,7 +173,7 @@ namespace LDAPTest
             catch (Exception ex)
             {
                 txtInfo.ForeColor = System.Drawing.Color.Red;
-                _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em ConectarUsuarioESenhaDI {ex.ToString()}", null, null);
+                _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em ConectarUsuarioESenhaDI {ex.Message}", null, null);
                 LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.Message}");
                 LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.StackTrace}");
             }

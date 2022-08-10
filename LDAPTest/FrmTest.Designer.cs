@@ -1,7 +1,7 @@
 ﻿
 namespace LDAPTest
 {
-    partial class Form1
+    partial class FrmTest
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,8 @@ namespace LDAPTest
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtFilter = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtgroup = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@ namespace LDAPTest
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtFilter = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -101,6 +101,23 @@ namespace LDAPTest
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1351, 177);
             this.panel1.TabIndex = 0;
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.Location = new System.Drawing.Point(129, 144);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(853, 20);
+            this.txtFilter.TabIndex = 27;
+            this.txtFilter.Text = "sAMAccountName=Usuario01";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 144);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Filter";
             // 
             // label5
             // 
@@ -179,7 +196,6 @@ namespace LDAPTest
             this.txtadminPassword.PasswordChar = '*';
             this.txtadminPassword.Size = new System.Drawing.Size(366, 20);
             this.txtadminPassword.TabIndex = 17;
-            this.txtadminPassword.Text = "p0$e!d0n5555";
             // 
             // txtadminUser
             // 
@@ -187,7 +203,6 @@ namespace LDAPTest
             this.txtadminUser.Name = "txtadminUser";
             this.txtadminUser.Size = new System.Drawing.Size(366, 20);
             this.txtadminUser.TabIndex = 16;
-            this.txtadminUser.Text = "wsantos";
             // 
             // txtcontainer
             // 
@@ -195,7 +210,6 @@ namespace LDAPTest
             this.txtcontainer.Name = "txtcontainer";
             this.txtcontainer.Size = new System.Drawing.Size(366, 20);
             this.txtcontainer.TabIndex = 15;
-            this.txtcontainer.Text = "DC=wsantos,dc=com";
             // 
             // txtdomainController
             // 
@@ -287,30 +301,13 @@ namespace LDAPTest
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 144);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Filter";
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.Location = new System.Drawing.Point(129, 144);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(853, 20);
-            this.txtFilter.TabIndex = 27;
-            this.txtFilter.Text = "sAMAccountName=Usuario01";
-            // 
-            // Form1
+            // FrmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1357, 777);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form1";
+            this.Name = "FrmTest";
             this.Text = "Teste LDAP";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
