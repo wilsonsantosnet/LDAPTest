@@ -44,7 +44,10 @@ namespace LDAPTest
             catch (Exception ex)
             {
                 txtInfo.ForeColor = System.Drawing.Color.Red;
-                _atualizarTela.BeginInvoke($"[{DateTime.Now}]-[error]- Ocorreu um erro em ConectarUsuarioESenha {ex.Message}", null, null);
+                _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em ConectarUsuarioESenha {ex.Message}", null, null);
+                LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.Message}");
+                LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.StackTrace}");
+
             }
         }
 
@@ -91,6 +94,9 @@ namespace LDAPTest
             {
                 txtInfo.ForeColor = System.Drawing.Color.Red;
                 _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em VerificarUsuarioNoGrupos {ex.ToString()}", null, null);
+                LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.Message}");
+                LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.StackTrace}");
+
             }
         }
 
@@ -138,6 +144,9 @@ namespace LDAPTest
             {
                 txtInfo.ForeColor = System.Drawing.Color.Red;
                 _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em VerificarUsuarioNoGruposV2 {ex.ToString()}", null, null);
+                LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.Message}");
+                LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.StackTrace}");
+
             }
         }
         private  void ConectarUsuarioESenhaDI()
@@ -165,6 +174,8 @@ namespace LDAPTest
             {
                 txtInfo.ForeColor = System.Drawing.Color.Red;
                 _atualizarTela.BeginInvoke($"[{DateTime.Now}] - [error] - Ocorreu um erro em ConectarUsuarioESenhaDI {ex.ToString()}", null, null);
+                LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.Message}");
+                LogHelper.Write($"[{DateTime.Now}] - [error] - {ex.StackTrace}");
             }
         }
 
@@ -177,7 +188,10 @@ namespace LDAPTest
                 txtInfo.BeginInvoke(safeWrite);
             }
             else
+            {
                 txtInfo.Text = txtInfo.Text + msg + System.Environment.NewLine;
+                LogHelper.Write(msg);
+            }
 
         }
 
